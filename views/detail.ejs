@@ -1,0 +1,15 @@
+<% include partial/header %>
+
+<div class='container my-5 pb-5'>
+        <img src="<%= camp.image %>" alt="">
+        <h4 class='pt-3'> <%= camp.name %> </h4>
+        <p> <%= camp.description %> </p>
+        <div class='float-left'>
+                <a class='btn btn-outline-primary mr-3' href="/campground/<%= camp._id %>/edit"> Edit </a>
+        </div>
+        <div class='float-left ml-2'>
+                <form action="/campground/<%= camp._id %>?_method=DELETE" method="POST">
+                        <button class='btn btn-outline-danger'> Delete </button>
+                </form>
+        </div>
+</div>

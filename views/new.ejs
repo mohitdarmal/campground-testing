@@ -1,0 +1,26 @@
+<% include partial/header %>
+
+<div class='container campground-new-form my-5'>
+    <form action="/campground" method="POST">
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail1">Enter YelpCamp Name</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter Name" name="camp[name]">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="exampleInputEmail2">Enter Image Url</label>
+            <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp"
+                placeholder="Url" name="camp[image]">
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="exampleFormControlTextarea1">Enter YelpCamp Description</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="camp[description]"></textarea>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
