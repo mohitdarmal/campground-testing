@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 var ObjectID = require("mongodb").ObjectID;
+const port = process.env.PORT || 3000;
 
 
 //App Confiig
@@ -14,7 +15,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(methodOverride("_method"));
 
-
+// mongodb://localhost:27017/campground
+// mongodb+srv://Mohit:<mohit@321>@campground-test-a8kze.mongodb.net/test?retryWrites=true&w=majority
 //Mongoose Config
 mongoose.connect("mongodb://localhost:27017/campground", {
     useNewUrlParser: true
@@ -115,6 +117,6 @@ app.delete("/campground/:id", (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("App Has Started on PORT 3000!!!");
+app.listen(port, () => {
+    console.log(`App Has Started on PORT ${port}!!!`);
 });
