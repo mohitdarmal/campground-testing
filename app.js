@@ -18,7 +18,7 @@ app.use(methodOverride("_method"));
 // mongodb://localhost:27017/campground
 // mongodb+srv://Mohit:<mohit@321>@campground-test-a8kze.mongodb.net/test?retryWrites=true&w=majority
 //Mongoose Config
-mongoose.connect("mongodb://localhost:27017/campground", {
+mongoose.connect("mongodb+srv://Mohit:mohit@321@campground-test-a8kze.mongodb.net/test?retryWrites=true&w=majority", {
     useNewUrlParser: true
 }, () => {
     console.log("Mongoose Has Connected!!");
